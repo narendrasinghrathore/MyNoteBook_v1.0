@@ -1,0 +1,48 @@
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\largedb.mdf
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\largedb_log.ldf
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe.config
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe.manifest
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.application
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.pdb
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\itextsharp.dll
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MySql.Data.dll
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.csprojResolveAssemblyReference.cache
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.AboutBox.resources
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.MainForm.resources
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.Properties.Resources.resources
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.csproj.GenerateResource.Cache
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\RdlCompile.cache
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.TrustInfo.xml
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.exe.manifest
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.application
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.exe
+C:\Users\Developer\Desktop\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.pdb
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe.config
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\largedb.mdf
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\largedb_log.ldf
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe.manifest
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.application
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.exe
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MyNoteBook_v1.0.pdb
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\EntityFramework.dll
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\itextsharp.dll
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\MySql.Data.dll
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\EntityFramework.xml
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.csprojResolveAssemblyReference.cache
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.AboutBox.resources
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.MainForm.resources
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.ForTestingOutputValues.resources
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.Properties.Resources.resources
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1._0.WelcomeWindow.resources
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.csproj.GenerateResource.Cache
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\RdlCompile.cache
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.TrustInfo.xml
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.exe.manifest
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.application
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.exe
+C:\Users\Developer\documents\visual studio 2010\Projects\MyNoteBook_v1.0\MyNoteBook_v1.0\obj\x86\Debug\MyNoteBook_v1.0.pdb

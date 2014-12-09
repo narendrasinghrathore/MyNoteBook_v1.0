@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NoteModelStoreContainer" CdmEntityContainer="largedbEntities">
+    <EntitySetMapping Name="mydocs">
+      <EntityTypeMapping TypeName="NoteModel.mydoc">
+        <MappingFragment StoreEntitySet="mydocs">
+          <ScalarProperty Name="tid" ColumnName="tid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="stuff" ColumnName="stuff" />
+          <ScalarProperty Name="mydate" ColumnName="mydate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remindmes">
+      <EntityTypeMapping TypeName="NoteModel.remindme">
+        <MappingFragment StoreEntitySet="remindme">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="docTitle" ColumnName="docTitle" />
+          <ScalarProperty Name="remindmeon" ColumnName="remindmeon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ActivityLog">
+      <EntityTypeMapping TypeName="NoteModel.tbl_ActivityLog">
+        <MappingFragment StoreEntitySet="tbl_ActivityLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TaskDone" ColumnName="TaskDone" />
+          <ScalarProperty Name="AtDate" ColumnName="AtDate" />
+          <ScalarProperty Name="AtTime" ColumnName="AtTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

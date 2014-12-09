@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NoteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="NoteModelStoreContainer">
+    <EntitySet Name="mydocs" EntityType="NoteModel.Store.mydocs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="remindme" EntityType="NoteModel.Store.remindme" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_ActivityLog" EntityType="NoteModel.Store.tbl_ActivityLog" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_remindme_mydocs" Association="NoteModel.Store.FK_remindme_mydocs">
+      <End Role="mydocs" EntitySet="mydocs" />
+      <End Role="remindme" EntitySet="remindme" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="mydocs">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="3000" />
+    <Property Name="stuff" Type="nvarchar" />
+    <Property Name="mydate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="remindme">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="docTitle" Type="int" />
+    <Property Name="remindmeon" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_ActivityLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TaskDone" Type="nvarchar" MaxLength="50" />
+    <Property Name="AtDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="AtTime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_remindme_mydocs">
+    <End Role="mydocs" Type="NoteModel.Store.mydocs" Multiplicity="0..1" />
+    <End Role="remindme" Type="NoteModel.Store.remindme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mydocs">
+        <PropertyRef Name="tid" />
+      </Principal>
+      <Dependent Role="remindme">
+        <PropertyRef Name="docTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

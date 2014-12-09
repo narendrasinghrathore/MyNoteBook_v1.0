@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NoteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NoteModelStoreContainer">
+          <EntitySet Name="mydocs" EntityType="NoteModel.Store.mydocs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remindme" EntityType="NoteModel.Store.remindme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_ActivityLog" EntityType="NoteModel.Store.tbl_ActivityLog" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_remindme_mydocs" Association="NoteModel.Store.FK_remindme_mydocs">
+            <End Role="mydocs" EntitySet="mydocs" />
+            <End Role="remindme" EntitySet="remindme" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="mydocs">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="3000" />
+          <Property Name="stuff" Type="nvarchar" />
+          <Property Name="mydate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remindme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="docTitle" Type="int" />
+          <Property Name="remindmeon" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ActivityLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaskDone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AtDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="AtTime" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_remindme_mydocs">
+          <End Role="mydocs" Type="NoteModel.Store.mydocs" Multiplicity="0..1" />
+          <End Role="remindme" Type="NoteModel.Store.remindme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mydocs">
+              <PropertyRef Name="tid" />
+            </Principal>
+            <Dependent Role="remindme">
+              <PropertyRef Name="docTitle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NoteModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="largedbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="mydocs" EntityType="NoteModel.mydoc" />
+          <EntitySet Name="remindmes" EntityType="NoteModel.remindme" />
+          <EntitySet Name="tbl_ActivityLog" EntityType="NoteModel.tbl_ActivityLog" />
+          <AssociationSet Name="FK_remindme_mydocs" Association="NoteModel.FK_remindme_mydocs">
+            <End Role="mydocs" EntitySet="mydocs" />
+            <End Role="remindme" EntitySet="remindmes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="mydoc">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="stuff" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="mydate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="remindmes" Relationship="NoteModel.FK_remindme_mydocs" FromRole="mydocs" ToRole="remindme" />
+        </EntityType>
+        <EntityType Name="remindme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="docTitle" Type="Int32" />
+          <Property Name="remindmeon" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="mydoc" Relationship="NoteModel.FK_remindme_mydocs" FromRole="remindme" ToRole="mydocs" />
+        </EntityType>
+        <EntityType Name="tbl_ActivityLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskDone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AtDate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AtTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_remindme_mydocs">
+          <End Role="mydocs" Type="NoteModel.mydoc" Multiplicity="0..1" />
+          <End Role="remindme" Type="NoteModel.remindme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mydocs">
+              <PropertyRef Name="tid" />
+            </Principal>
+            <Dependent Role="remindme">
+              <PropertyRef Name="docTitle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NoteModelStoreContainer" CdmEntityContainer="largedbEntities">
+          <EntitySetMapping Name="mydocs">
+            <EntityTypeMapping TypeName="NoteModel.mydoc">
+              <MappingFragment StoreEntitySet="mydocs">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="stuff" ColumnName="stuff" />
+                <ScalarProperty Name="mydate" ColumnName="mydate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remindmes">
+            <EntityTypeMapping TypeName="NoteModel.remindme">
+              <MappingFragment StoreEntitySet="remindme">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="docTitle" ColumnName="docTitle" />
+                <ScalarProperty Name="remindmeon" ColumnName="remindmeon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ActivityLog">
+            <EntityTypeMapping TypeName="NoteModel.tbl_ActivityLog">
+              <MappingFragment StoreEntitySet="tbl_ActivityLog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TaskDone" ColumnName="TaskDone" />
+                <ScalarProperty Name="AtDate" ColumnName="AtDate" />
+                <ScalarProperty Name="AtTime" ColumnName="AtTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="NoteModel">
+        <EntityTypeShape EntityType="NoteModel.mydoc" Width="1.5" PointX="0.75" PointY="0.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="NoteModel.remindme" Width="1.5" PointX="2.875" PointY="1" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="NoteModel.tbl_ActivityLog" Width="1.5" PointX="0.75" PointY="3.25" Height="1.787985026041667" IsExpanded="true" />
+        <AssociationConnector Association="NoteModel.FK_remindme_mydocs" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.8939925130208337" />
+          <ConnectorPoint PointX="2.875" PointY="1.8939925130208337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
